@@ -1,0 +1,124 @@
+{
+  "time_utc": "2026-09-19T09:40:40.099646+00:00",
+  "samples": [
+    {
+      "fixture": "benign-skill",
+      "verdict": "no_indicators_in_scanned_material",
+      "coverage": true,
+      "api": {
+        "endpoint": "https://api.typesafe.ai/v1/systemone",
+        "model_requested": "jev-1.13.0",
+        "attempts": 1,
+        "responses": 1,
+        "usage": {
+          "input_tokens": 2098,
+          "output_tokens": 171
+        }
+      },
+      "model_findings": [],
+      "errors": []
+    },
+    {
+      "fixture": "malicious-skill",
+      "verdict": "high_risk_suspected",
+      "coverage": true,
+      "api": {
+        "endpoint": "https://api.typesafe.ai/v1/systemone",
+        "model_requested": "jev-1.13.0",
+        "attempts": 2,
+        "responses": 2,
+        "usage": {
+          "input_tokens": 5769,
+          "output_tokens": 538
+        }
+      },
+      "model_findings": [
+        {
+          "category": "credential_theft",
+          "severity": "review",
+          "probability": 0.9,
+          "status": "suspected_behavior"
+        },
+        {
+          "category": "data_exfiltration",
+          "severity": "review",
+          "probability": 0.88,
+          "status": "suspected_behavior"
+        },
+        {
+          "category": "prompt_injection",
+          "severity": "high",
+          "probability": 0.95,
+          "status": "suspected_behavior"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "fixture": "malicious-mcp",
+      "verdict": "high_risk_suspected",
+      "coverage": true,
+      "api": {
+        "endpoint": "https://api.typesafe.ai/v1/systemone",
+        "model_requested": "jev-1.13.0",
+        "attempts": 4,
+        "responses": 4,
+        "usage": {
+          "input_tokens": 10145,
+          "output_tokens": 823
+        }
+      },
+      "model_findings": [
+        {
+          "category": "remote_execution",
+          "severity": "review",
+          "probability": 0.67,
+          "status": "suspected_behavior"
+        },
+        {
+          "category": "supply_chain",
+          "severity": "high",
+          "probability": 0.93,
+          "status": "suspected_behavior"
+        },
+        {
+          "category": "credential_theft",
+          "severity": "high",
+          "probability": 0.96,
+          "status": "suspected_behavior"
+        },
+        {
+          "category": "data_exfiltration",
+          "severity": "high",
+          "probability": 0.93,
+          "status": "suspected_behavior"
+        },
+        {
+          "category": "prompt_injection",
+          "severity": "review",
+          "probability": 0.95,
+          "status": "suspected_behavior"
+        }
+      ],
+      "errors": []
+    },
+    {
+      "fixture": "quoted-example",
+      "verdict": "needs_review",
+      "coverage": true,
+      "api": {
+        "endpoint": "https://api.typesafe.ai/v1/systemone",
+        "model_requested": "jev-1.13.0",
+        "attempts": 1,
+        "responses": 1,
+        "usage": {
+          "input_tokens": 2216,
+          "output_tokens": 171
+        }
+      },
+      "model_findings": [],
+      "errors": []
+    }
+  ],
+  "target_code_executed": false
+}

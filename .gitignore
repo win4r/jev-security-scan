@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+.pytest_cache/
+graphify-out/
+reports/
+dist/
+build/

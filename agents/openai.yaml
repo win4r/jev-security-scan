@@ -1,0 +1,4 @@
+interface:
+  display_name: "Jev Skill / MCP 安全扫描"
+  short_description: "用静态证据与 Jev 判断 Skill、MCP 中的可疑行为和提示词注入"
+  default_prompt: "Use $jev-security-scan to inspect this Skill or MCP project for suspicious behavior and report evidence and scan coverage."
